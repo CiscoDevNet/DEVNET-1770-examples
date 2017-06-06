@@ -1,0 +1,15 @@
+Headers and body
+- curl -v https://sandboxapic.cisco.com
+
+Headers and body
+- curl -s -D - https://sandboxapic.cisco.com
+
+Only headers
+- curl -s -D - https://sandboxapic.cisco.com -o /dev/null
+
+How to send data using POST and a JSON payload
+This example creates a service ticket for APIC-EM
+- curl -H "Content-Type: application/json" -X POST -d '{"username":"devnetuser","password":"Cisco123!"}' https://sandboxapic.cisco.com/api/v1/ticket
+
+This example uses the service token from above to make an authenticated call to the APIC-EM REST API.
+- curl -H "X-Auth-Token: <add your token here>" https://sandboxapic.cisco.com/api/v1/network-device

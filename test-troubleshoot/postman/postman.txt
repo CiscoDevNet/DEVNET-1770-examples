@@ -1,0 +1,4 @@
+- Open Postman
+- Locate the "Postman Echo" collection
+- Try out the Headers folder
+- Observe the Request Methods folder
