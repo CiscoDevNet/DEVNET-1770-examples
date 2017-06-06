@@ -1,0 +1,8 @@
+@startuml
+
+flask -> Spark: GET /people/me
+flask <-- SparkWebhook: JSON payload
+flask -> Spark: POST /messages
+flask <-- SparkWebhook: JSON Payload
+
+@enduml
