@@ -1,0 +1,33 @@
+
+Git learning labs:
+- https://learninglabs.cisco.com/labs/tags/Git
+- Git 100, 101, 102
+
+
+Git Plugins
+- Atom: apm install git-plus
+- vim: Plugin 'airblade/vim-gitgutter' (a Vundle package)
+- emacs: magit plugin
+
+GUI Clients:
+
+- Sourcetree by Atlassian
+- GitKraken
+- GitHub Client (I don't particularly like this one)
+
+Replace the text of `scm.py` with this into Atom after you've enabled git-plus:
+
+```
+"""Example"""
+
+def say_hello(name):
+    """Say hello"""
+    print("Hello from CiscoLive, " + name + "!")
+
+def say_goodbye(name):
+    """Say goodbye"""
+    print("Goodbye, " + name + "!")
+
+say_hello("Ashley")
+say_goodbye("Ashley")
+```

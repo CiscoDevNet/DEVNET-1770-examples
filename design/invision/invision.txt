@@ -1,0 +1,6 @@
+This is a clickable demo project created by Invision:
+- https://projects.invisionapp.com/d/main#/projects/prototypes/11245307
+
+- Click on the Login wireframe
+- Click on some of the whitespace to see the hotspots
+- Click through one of the hotspots
