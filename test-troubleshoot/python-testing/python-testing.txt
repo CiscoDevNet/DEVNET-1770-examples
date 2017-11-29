@@ -1,0 +1,44 @@
+The "norris" project demonstrates how to do basic testing and mocking of an API call using the Chuck Norris Joke API.
+
+To run this project:
+
+Prerequisites: You need to have python3.6 and pip3 installed.
+
+1) Create a virtualenv: in the norris directory, virtualenv venv --python=python3.6
+2) source venv/bin/activate
+3) pip3 install tox
+4) (Optional if using PyCharm) 'pip3 install requests nose'.  Also, right click the norris/ directory and Mark as... "Sources Root"
+
+To execute the tests:
+Option 1) tox
+Option 2) python3 setup.py test
+
+When you're all done, you can switch off the virtual environment with "deactivate"
+
+
+Virtual environments
+- In Python, a very useful tool is called virtualenv.
+- Virtualenv creates a directory in which your python versions and dependencies are stored.
+- Prevents caching issues
+- Commands:
+    virtualenv venv
+    source venv/bin/activate
+    deactivate
+
+Tox
+- A test runner utility that also leverages virtual environments
+- Look at tox.ini
+
+Mocking
+
+Open norris/norris/tests/test_norris.py
+
+Change Line 37 to:
+
+        mock_get.return_value = test_response
+
+Resources:
+https://virtualenv.pypa.io
+https://tox.readthedocs.io
+https://docs.python.org/3/library/unittest.mock.html
+https://realpython.com/blog/python/testing-third-party-apis-with-mocks/

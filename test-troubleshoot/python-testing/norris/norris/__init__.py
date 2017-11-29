@@ -1,0 +1,1 @@
+from .services import get_joke, joke_length

@@ -1,1 +1,6 @@
 venv
+.cache
+.eggs
+.tox
+*.egg-info
+*.pyc
