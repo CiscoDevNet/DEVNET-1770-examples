@@ -7,11 +7,10 @@ Prerequisites: You need to have python3.6 and pip3 installed.
 1) Create a virtualenv: in the norris directory, virtualenv venv --python=python3.6
 2) source venv/bin/activate
 3) pip3 install tox
-4) (Optional if using PyCharm) 'pip3 install requests nose'.  Also, right click the norris/ directory and Mark as... "Sources Root"
+4) 'pip3 install -r requirements.txt'.  Also, right click the norris/ directory and Mark as... "Sources Root"
 
 To execute the tests:
-Option 1) tox
-Option 2) python3 setup.py test
+1) tox
 
 When you're all done, you can switch off the virtual environment with "deactivate"
 

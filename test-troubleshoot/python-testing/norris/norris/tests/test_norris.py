@@ -1,7 +1,6 @@
 from unittest import TestCase
-from unittest.mock import Mock, patch
+from unittest.mock import patch
 from nose.tools import nottest
-import json
 
 import norris
 
@@ -44,24 +43,33 @@ class TestNorris(TestCase):
     # @nottest
     @patch('norris.get_joke')
     def test_norris_mock(self, mock_get):
+        mock_response = {
+            "category": "['science']",
+            "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+            "id": "7SIYDCQ6QiiTLtd-B3sBEQ",
+            "url": "http://api.chucknorris.io/jokes/7SIYDCQ6QiiTLtd-B3sBEQ",
+            "value": "Chuck Norris broke the speed of sound. With his elbow."
+        }
 
-        mock_get.return_value = "blah"
-
-        # print(mock_get.return_value)
+        mock_get.return_value = mock_response
 
         result = norris.get_joke()
 
-        # print(result)
-
-        self.assertEqual(self.test_response, result)
+        self.assertEqual(mock_response, result)
 
     # @nottest
     @patch('norris.services.get_joke')
     def test_norris_value(self, mock_get):
 
-        mock_get.return_value = self.test_response
+        mock_response2 = {
+            "category": "['science']",
+            "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+            "id": "7SIYDCQ6QiiTLtd-B3sBEQ",
+            "url": "http://api.chucknorris.io/jokes/7SIYDCQ6QiiTLtd-B3sBEQ",
+            "value": "Chuck Norris broke the speed of sound. With his elbow."
+        }
 
-        print(mock_get)
+        mock_get.return_value = mock_response2
 
         result = norris.joke_length()
         self.assertEqual(result, len( "Chuck Norris broke the speed of sound. With his elbow." ) )
