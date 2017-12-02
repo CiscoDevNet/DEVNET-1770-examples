@@ -1,9 +1,5 @@
 import pytest
 import responses
-import requests
-
-
-import json
 
 from norris import get_joke, joke_length
 
