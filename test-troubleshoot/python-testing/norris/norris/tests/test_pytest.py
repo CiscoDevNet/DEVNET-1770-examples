@@ -50,3 +50,22 @@ def test_norris_value(my_responses):
 
     result = joke_length()
     assert result == test_value
+
+# This test is to demonstrate when you might want to use curl or postman
+# to troubleshoot an API call
+"""
+Imagine the response used to look like:
+{
+  "data": {
+      "category": "['science']",
+      "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+      "id": "7SIYDCQ6QiiTLtd-B3sBEQ",
+      "url": "http://api.chucknorris.io/jokes/7SIYDCQ6QiiTLtd-B3sBEQ",
+      "value": "Chuck Norris broke the speed of sound. With his elbow."
+  }
+}
+"""
+def test_norris_badkey():
+    result = get_joke()
+    # This will fail because there's no such key as data anymore
+    assert result["data"]["value"] == "This is a bad key"
